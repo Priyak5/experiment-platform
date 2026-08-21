@@ -1,4 +1,4 @@
-.PHONY: build test test-short lint up down run tidy fmt
+.PHONY: build test test-short lint up down run tidy fmt demo
 
 GO ?= go
 
@@ -41,3 +41,8 @@ down:
 
 run:
 	$(GO) run ./cmd/server
+
+# Non-interactive end-to-end demo: brings up compose, runs migrations, boots
+# the server in the background, drives the runbook via curl, and asserts.
+demo:
+	@bash scripts/demo.sh
