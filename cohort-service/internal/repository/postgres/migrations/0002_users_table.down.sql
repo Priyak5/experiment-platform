@@ -1,0 +1,3 @@
+DROP INDEX IF EXISTS idx_users_ltv;
+DROP INDEX IF EXISTS idx_users_city;
+DROP TABLE IF EXISTS users;
